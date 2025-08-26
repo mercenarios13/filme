@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saga Vingadores</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Saga Vingadores</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Voltar à Página Principal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Filmes da Saga</h2>
+            <div class="filmes">
+                <div class="filme-card"
+                     data-titulo="Vingadores (2012)"
+                     data-trailer="https://www.youtube.com/watch?v=eOrNdBpGMv8"
+                     data-filme="https://www.exemplo.com/vingadores-2012-full">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/f/f9/TheAvengers2012Poster.jpg" alt="Vingadores 2012">
+                    <p>Vingadores (2012)</p>
+                </div>
+
+                <div class="filme-card"
+                     data-titulo="Vingadores: Era de Ultron"
+                     data-trailer="https://www.youtube.com/watch?v=tmeOjFno6Do"
+                     data-filme="https://www.exemplo.com/vingadores-era-de-ultron-full">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/4/4d/Avengers_Age_Of_Ultron_poster.jpg" alt="Era de Ultron">
+                    <p>Vingadores: Era de Ultron</p>
+                </div>
+
+                <div class="filme-card"
+                     data-titulo="Vingadores: Guerra Infinita"
+                     data-trailer="https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+                     data-filme="https://www.exemplo.com/guerra-infinita-full">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/f/f9/Avengers_Infinity_War.jpg" alt="Guerra Infinita">
+                    <p>Vingadores: Guerra Infinita</p>
+                </div>
+
+                <div class="filme-card"
+                     data-titulo="Vingadores: Ultimato"
+                     data-trailer="https://www.youtube.com/watch?v=TcMBFSGVi1c"
+                     data-filme="https://www.exemplo.com/ultimato-full">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/9/90/Avengers_Endgame.jpg" alt="Ultimato">
+                    <p>Vingadores: Ultimato</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Filmes - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Modal (igual às outras páginas) -->
+    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:1000;">
+        <div style="background:#222; color:#fff; max-width:400px; margin:10% auto; padding:20px; border-radius:8px; text-align:center; position:relative;">
+            <span id="close-modal" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; color:#e53935;">&times;</span>
+            <h2 id="modal-title">Título do Filme</h2>
+            <button id="btn-trailer" style="margin:10px; padding:10px 20px; background-color:#e53935; color:#fff; border:none; border-radius:5px; cursor:pointer;">Assistir Trailer</button>
+            <button id="btn-filme" style="margin:10px; padding:10px 20px; background-color:#e53935; color:#fff; border:none; border-radius:5px; cursor:pointer;">Assistir Filme Completo</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('modal');
+            const closeModal = document.getElementById('close-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const btnTrailer = document.getElementById('btn-trailer');
+            const btnFilme = document.getElementById('btn-filme');
+
+            function abrirModal(titulo, trailer, filme) {
+                modalTitle.textContent = titulo;
+                btnTrailer.onclick = () => window.open(trailer, '_blank');
+                btnFilme.onclick = () => window.open(filme, '_blank');
+                modal.style.display = 'block';
+            }
+
+            closeModal.onclick = () => modal.style.display = 'none';
+
+            window.onclick = (event) => {
+                if (event.target === modal) modal.style.display = 'none';
+            };
+
+            document.querySelectorAll('.filme-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const titulo = card.getAttribute('data-titulo');
+                    const trailer = card.getAttribute('data-trailer');
+                    const filme = card.getAttribute('data-filme');
+                    abrirModal(titulo, trailer, filme);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

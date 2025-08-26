@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saga Transformers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
+  <header>
+    <h1 style="color: #e53935;">Saga Transformers</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" style="color: #e53935;">Voltar à Página Principal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Filmes</h2>
+      <div class="filmes" style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <!-- Filme 1 -->
+        <div class="filme-card" 
+             data-titulo="Transformers (2007)"
+             data-trailer="https://www.youtube.com/watch?v=v8ItGrI-Ou0"
+             data-filme="https://www.exemplo.com/transformers-2007">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/3/39/Transformers_2007.jpg" 
+               alt="Transformers 2007" style="width: 180px; border-radius: 8px;">
+          <p>Transformers (2007)</p>
+        </div>
+
+        <!-- Filme 2 -->
+        <div class="filme-card" 
+             data-titulo="Transformers: A Vingança dos Derrotados"
+             data-trailer="https://www.youtube.com/watch?v=yCOvcyfR_0I"
+             data-filme="https://www.exemplo.com/transformers-2">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/e/e7/Transformersrevengeofthefallen.jpg" 
+               alt="Transformers 2" style="width: 180px; border-radius: 8px;">
+          <p>Transformers: A Vingança dos Derrotados</p>
+        </div>
+
+        <!-- Filme 3 -->
+        <div class="filme-card" 
+             data-titulo="Transformers: O Lado Oculto da Lua"
+             data-trailer="https://www.youtube.com/watch?v=Eun1I5g4k9s"
+             data-filme="https://www.exemplo.com/transformers-3">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/8/84/Transformers_3_poster.jpg" 
+               alt="Transformers 3" style="width: 180px; border-radius: 8px;">
+          <p>Transformers: O Lado Oculto da Lua</p>
+        </div>
+
+        <!-- Filme 4 -->
+        <div class="filme-card" 
+             data-titulo="Transformers: A Era da Extinção"
+             data-trailer="https://www.youtube.com/watch?v=dYDGqmxMZFI"
+             data-filme="https://www.exemplo.com/transformers-4">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/6/60/Transformers_Age_of_Extinction.jpg" 
+               alt="Transformers 4" style="width: 180px; border-radius: 8px;">
+          <p>Transformers: A Era da Extinção</p>
+        </div>
+
+        <!-- Filme 5 -->
+        <div class="filme-card" 
+             data-titulo="Transformers: O Último Cavaleiro"
+             data-trailer="https://www.youtube.com/watch?v=AntcyqJ6brc"
+             data-filme="https://www.exemplo.com/transformers-5">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/6/66/Transformers_The_Last_Knight.jpg" 
+               alt="Transformers 5" style="width: 180px; border-radius: 8px;">
+          <p>Transformers: O Último Cavaleiro</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="margin-top: 40px; text-align: center; color: #e53935;">
+    <p>&copy; 2025 Filmes - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:1000;">
+    <div style="background:#222; color:#fff; max-width:400px; margin:10% auto; padding:20px; border-radius:8px; text-align:center; position:relative;">
+      <span id="close-modal" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; color:#e53935;">&times;</span>
+      <h2 id="modal-title" style="margin-bottom:20px;">Título do Filme</h2>
+      <button id="btn-trailer" style="margin:10px; padding:10px 20px; background-color:#e53935; color:#fff; border:none; border-radius:5px; cursor:pointer;">Assistir Trailer</button>
+      <button id="btn-filme" style="margin:10px; padding:10px 20px; background-color:#e53935; color:#fff; border:none; border-radius:5px; cursor:pointer;">Assistir Filme Completo</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('modal');
+      const closeModal = document.getElementById('close-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const btnTrailer = document.getElementById('btn-trailer');
+      const btnFilme = document.getElementById('btn-filme');
+
+      function abrirModal(titulo, trailer, filme) {
+        modalTitle.textContent = titulo;
+        btnTrailer.onclick = () => window.open(trailer, '_blank');
+        btnFilme.onclick = () => window.open(filme, '_blank');
+        modal.style.display = 'block';
+      }
+
+      closeModal.onclick = () => modal.style.display = 'none';
+      window.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+
+      document.querySelectorAll('.filme-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const titulo = card.getAttribute('data-titulo');
+          const trailer = card.getAttribute('data-trailer');
+          const filme = card.getAttribute('data-filme');
+          abrirModal(titulo, trailer, filme);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
