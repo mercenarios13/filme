@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saga Homem-Aranha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
+  <header>
+    <h1 style="color: #e53935;">Saga Homem-Aranha</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" style="color: #e53935;">Voltar à Página Principal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Filmes</h2>
+      <div class="filmes" style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+        <!-- Tobey Maguire -->
+        <div class="filme-card" 
+             data-titulo="Homem-Aranha (2002)"
+             data-trailer="https://www.youtube.com/watch?v=t06RUxPbp_c"
+             data-filme="https://www.exemplo.com/aranha-2002">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/0/02/Spider-man.jpg"
+               alt="Homem-Aranha 2002" style="width: 180px; border-radius: 8px;">
+          <p>Homem-Aranha (2002)</p>
+        </div>
+
+        <div class="filme-card" 
+             data-titulo="Homem-Aranha 2 (2004)"
+             data-trailer="https://www.youtube.com/watch?v=1s9Yln0YwCw"
+             data-filme="https://www.exemplo.com/aranha-2">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/6/64/Spider-Man_2.jpg"
+               alt="Homem-Aranha 2" style="width: 180px; border-radius: 8px;">
+          <p>Homem-Aranha 2 (2004)</p>
+        </div>
+
+        <div class="filme-card" 
+             data-titulo="Homem-Aranha 3 (2007)"
+             data-trailer="https://www.youtube.com/watch?v=wPosLpgMtTY"
+             data-filme="https://www.exemplo.com/aranha-3">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/0/02/Homem-Aranha_3.jpg"
+               alt="Homem-Aranha 3" style="width: 180px; border-radius: 8px;">
+          <p>Homem-Aranha 3 (2007)</p>
+        </div>
+
+        <!-- Andrew Garfield -->
+        <div class="filme-card" 
+             data-titulo="O Espetacular Homem-Aranha (2012)"
+             data-trailer="https://www.youtube.com/watch?v=-tnxzJ0SSOw"
+             data-filme="https://www.exemplo.com/esp-aranha-1">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/6/6c/Amazing_Spider_Man_Poster.jpg"
+               alt="Espetacular Homem-Aranha 1" style="width: 180px; border-radius: 8px;">
+          <p>O Espetacular Homem-Aranha (2012)</p>
+        </div>
+
+        <div class="filme-card" 
+             data-titulo="O Espetacular Homem-Aranha 2 (2014)"
+             data-trailer="https://www.youtube.com/watch?v=nbp3Ra3Yp74"
+             data-filme="https://www.exemplo.com/esp-aranha-2">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/e/e8/The_Amazing_Spiderman_2.jpg"
+               alt="Espetacular Homem-Aranha 2" style="width: 180px; border-radius: 8px;">
+          <p>Espetacular Homem-Aranha 2 (2014)</p>
+        </div>
+
+        <!-- Tom Holland (MCU) -->
+        <div class="filme-card" 
+             data-titulo="Homem-Aranha: De Volta ao Lar (2017)"
+             data-trailer="https://www.youtube.com/watch?v=DiTECkLZ8HM"
+             data-filme="https://www.exemplo.com/de-volta-ao-lar">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/f/f9/Spider-Man_Homecoming.png"
+               alt="De Volta ao Lar" style="width: 180px; border-radius: 8px;">
+          <p>De Volta ao Lar (2017)</p>
+        </div>
+
+        <div class="filme-card" 
+             data-titulo="Homem-Aranha: Longe de Casa (2019)"
+             data-trailer="https://www.youtube.com/watch?v=Nt9L1jCKGnE"
+             data-filme="https://www.exemplo.com/longe-de-casa">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/b/bd/Spider-Man_Far_From_Home_poster.jpg"
+               alt="Longe de Casa" style="width: 180px; border-radius: 8px;">
+          <p>Longe de Casa (2019)</p>
+        </div>
+
+        <div class="filme-card" 
+             data-titulo="Homem-Aranha: Sem Volta Para Casa (2021)"
+             data-trailer="https://www.youtube.com/watch?v=JfVOs4VSpmA"
+             data-filme="https://www.exemplo.com/sem-volta">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/0/00/Spider-Man_No_Way_Home_poster.jpg"
+               alt="Sem Volta Para Casa" style="width: 180px; border-radius: 8px;">
+          <p>Sem Volta Para Casa (2021)</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer style="margin-top: 40px; text-align: center; color: #e53935;">
+    <p>&copy; 2025 Filmes - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:1000;">
+    <div style="background:#222; color:#fff; max-width:400px; margin:10% auto; padding:20px; border-radius:8px; text-align:center; position:relative;">
+      <span id="close-modal" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; color:#e53935;">&times;</span>
+      <h2 id="modal-title" style="margin-bottom:20px;">Título do Filme</h2>
+      <button id="btn-trailer" style="margin:10px; padding:10px 20px; background-color:#e53935; color:#fff; border:none; border-radius:5px; cursor:pointer;">Assistir Trailer</button>
+      <button id="btn-filme" style="margin:10px; padding:10px 20px; background-color:#e53935; color:#fff; border:none; border-radius:5px; cursor:pointer;">Assistir Filme Completo</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('modal');
+      const closeModal = document.getElementById('close-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const btnTrailer = document.getElementById('btn-trailer');
+      const btnFilme = document.getElementById('btn-filme');
+
+      function abrirModal(titulo, trailer, filme) {
+        modalTitle.textContent = titulo;
+        btnTrailer.onclick = () => window.open(trailer, '_blank');
+        btnFilme.onclick = () => window.open(filme, '_blank');
+        modal.style.display = 'block';
+      }
+
+      closeModal.onclick = () => modal.style.display = 'none';
+      window.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+
+      document.querySelectorAll('.filme-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const titulo = card.getAttribute('data-titulo');
+          const trailer = card.getAttribute('data-trailer');
+          const filme = card.getAttribute('data-filme');
+          abrirModal(titulo, trailer, filme);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
