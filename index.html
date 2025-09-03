@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
-  <header style="text-align: center; padding: 20px;">
-    <h1 style="color: #e53935;">🎬 Bem-vindo ao Universo de Sagas</h1>
-    <p style="color: #ccc;">Escolha uma saga para explorar os filmes</p>
+  <header style="text-align: center; padding: 30px;">
+    <h1 style="color: #e53935; font-size: 2.5rem; text-shadow: 0 0 10px #e53935;">🎬 Universo de Sagas</h1>
+    <p style="color: #bbb; font-size: 1.2rem;">Escolha uma saga e mergulhe nos filmes</p>
   </header>
 
-  <main style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px;">
+  <main style="display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; padding: 40px;">
 
     <a href="transformers.html" class="saga-card">
       <img src="https://upload.wikimedia.org/wikipedia/pt/8/8e/Transformers_2007.jpg" alt="Transformers">
@@ -20,11 +20,11 @@
     </a>
 
     <a href="vingadores.html" class="saga-card">
-      <img src="https://upload.wikimedia.org/wikipedia/pt/8/8e/Transformers_2007.jpg" alt="vingadores">
+      <img src="https://upload.wikimedia.org/wikipedia/pt/9/90/Avengers_Endgame.jpg" alt="Vingadores">
       <span>Vingadores</span>
     </a>
 
-    <a href="velozes.html" class="saga-card">
+    <a href="velozes-e-furiosos.html" class="saga-card">
       <img src="https://upload.wikimedia.org/wikipedia/pt/3/3b/The_Fate_of_the_Furious.jpg" alt="Velozes e Furiosos">
       <span>Velozes e Furiosos</span>
     </a>
@@ -49,45 +49,51 @@
       <span>Senhor dos Anéis</span>
     </a>
 
-    <a href="star-wars.html" class="saga-card">
-      <img src="https://upload.wikimedia.org/wikipedia/pt/e/e5/Star_Wars_The_Force_Awakens_poster.jpg" alt="Star Wars">
-      <span>Star Wars</span>
-    </a>
-
   </main>
 
-  <footer style="text-align: center; color: #e53935; padding: 20px;">
+  <footer style="text-align: center; color: #e53935; padding: 20px; font-size: 0.9rem;">
     <p>&copy; 2025 Universo de Sagas - Todos os direitos reservados</p>
   </footer>
 
   <style>
     .saga-card {
-      background-color: #111;
+      background: linear-gradient(145deg, #111, #1c1c1c);
       border: 2px solid #e53935;
-      border-radius: 10px;
+      border-radius: 15px;
       text-align: center;
-      width: 180px;
-      padding: 10px;
+      width: 200px;
+      padding: 15px;
       text-decoration: none;
       color: #fff;
-      transition: transform 0.2s, border-color 0.2s;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     }
 
     .saga-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-10px) scale(1.07);
       border-color: #fff;
+      box-shadow: 0 8px 20px rgba(229, 57, 53, 0.7);
     }
 
     .saga-card img {
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      height: 260px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .saga-card:hover img {
+      transform: scale(1.05);
     }
 
     .saga-card span {
       display: block;
       font-weight: bold;
       color: #e53935;
+      font-size: 1.1rem;
+      text-shadow: 0 0 5px rgba(229, 57, 53, 0.6);
     }
   </style>
 </body>
