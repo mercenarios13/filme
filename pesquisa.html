@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisa de Filmes</title>
+    <title>Pesquisa de Filmes por Saga</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="pesquisa-theme" style="background:#000; color:#fff; font-family: Arial, sans-serif;">
+<body style="background:#000; color:#fff; font-family: Arial, sans-serif;">
 
     <!-- HEADER -->
     <header style="text-align:center; padding:30px; background:#111; color:#e53935;">
-        <h1 style="font-size:2.5rem; text-shadow:0 0 10px #e53935;">🔍 Pesquisa de Filmes</h1>
+        <h1 style="font-size:2.5rem; text-shadow:0 0 10px #e53935;">🔍 Pesquisa de Filmes por Saga</h1>
         <nav style="margin-top:15px;">
             <ul style="list-style:none; display:flex; justify-content:center; gap:20px; padding:0;">
                 <li><a href="index.html" style="color:#e53935; text-decoration:none; font-weight:bold;">Voltar à Página Principal</a></li>
@@ -23,9 +23,9 @@
 
         <!-- Formulário de Pesquisa -->
         <section style="margin-bottom:50px;">
-            <h2 style="color:#e53935; font-size:2rem; margin-bottom:20px; text-align:center; text-shadow:0 0 5px #e53935;">Encontre seu Filme</h2>
-            <form id="form-pesquisa" style="display:flex; flex-direction:column; align-items:center; gap:15px;">
-                <input type="text" id="pesquisa" placeholder="Digite o nome do filme ou gênero..." required
+            <h2 style="color:#e53935; font-size:2rem; margin-bottom:20px; text-align:center; text-shadow:0 0 5px #e53935;">Encontre sua Saga</h2>
+            <form id="form-pesquisa" action="resultado-pesquisa.html" method="get" style="display:flex; flex-direction:column; align-items:center; gap:15px;">
+                <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite o nome da saga..." required
                        style="width:100%; max-width:500px; padding:12px; border-radius:6px; border:1px solid #e53935; background:#222; color:#fff; font-size:1rem;">
                 <button type="submit" style="padding:12px 25px; background:#e53935; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:bold; font-size:1rem; transition:all 0.3s ease;">Pesquisar</button>
             </form>
@@ -34,8 +34,8 @@
         <!-- Resultados -->
         <section>
             <h3 style="color:#e53935; font-size:1.8rem; margin-bottom:20px; text-shadow:0 0 5px #e53935;">Resultados da Pesquisa</h3>
-            <div class="filmes" id="resultado-filmes" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:30px; justify-items:center;">
-                <!-- Os resultados aparecerão aqui via JS -->
+            <div id="resultado-filmes" class="filmes" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:30px; justify-items:center;">
+                <!-- Resultados serão carregados aqui -->
             </div>
         </section>
 
@@ -46,50 +46,67 @@
         <p>&copy; 2025 Universo de Sagas - Todos os direitos reservados</p>
     </footer>
 
-    <!-- SCRIPT DE PESQUISA -->
+    <!-- SCRIPT -->
     <script>
-        // Banco de dados de filmes
-        const filmes = [
-            { nome: "Missão Impossível", genero: "Ação", imagem: "filme-acao1.jpg", pagina: "missao-impossivel.html" },
-            { nome: "Se Beber, Não Case!", genero: "Comédia", imagem: "filme-comedia1.jpg", pagina: "se-beber-nao-case.html" },
-            { nome: "Interestelar", genero: "Ficção", imagem: "filme-ficcao1.jpg", pagina: "interestelar.html" },
-            { nome: "Vingadores: Ultimato", genero: "Ação", imagem: "vingadores.jpg", pagina: "vingadores.html" },
-            { nome: "Harry Potter e a Pedra Filosofal", genero: "Fantasia", imagem: "harry-potter1.jpg", pagina: "harry-potter.html" }
-            // Adicione mais filmes aqui
+        // Estrutura de Sagas e Filmes
+        const sagas = [
+            {
+                nome: "Transformers",
+                filmes: [
+                    { nome: "Transformers (2007)", imagem: "https://upload.wikimedia.org/wikipedia/pt/thumb/e/ee/Transformers-poster.jpg/250px-Transformers-poster.jpg", pagina: "transformers.html" },
+                    { nome: "Transformers: A Vingança dos Derrotados (2009)", imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiM5nHY9P0jd68KWfSmafcFQCQ7ExuskWiSQ&s", pagina: "transformers-2.html" },
+                    { nome: "Transformers: O Lado Oculto da Lua (2011)", imagem: "https://upload.wikimedia.org/wikipedia/pt/b/bf/Transformers_dark_of_the_moon_ver5.jpg", pagina: "transformers-3.html" },
+                    { nome: "Transformers: A Era da Extinção", imagem: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Transformers_Age_of_Extinction_poster.jpg/250px-Transformers_Age_of_Extinction_poster.jpg", pagina: "transformers-3.html" },
+                    { nome: "Transformers: O Último Cavaleiro", imagem: "https://upload.wikimedia.org/wikipedia/pt/b/bf/Transformers_dark_of_the_moon_ver5.jpg", pagina: "transformers-3.html" }
+                ]
+            },
+            {
+                nome: "Vingadores",
+                filmes: [
+                    { nome: "Os Vingadores (2012)", imagem: "https://upload.wikimedia.org/wikipedia/pt/9/90/Avengers_Endgame.jpg", pagina: "vingadores.html" },
+                    { nome: "Vingadores: A Era de Ultron (2015)", imagem: "https://upload.wikimedia.org/wikipedia/pt/6/67/Avengers_Age_of_Ultron.jpg", pagina: "vingadores-2.html" }
+                ]
+            },
+            {
+                nome: "Harry Potter",
+                filmes: [
+                    { nome: "Harry Potter e a Pedra Filosofal (2001)", imagem: "https://upload.wikimedia.org/wikipedia/pt/6/6e/Harry_Potter_Pedra_Filosofal_2001.jpg", pagina: "harry-potter.html" },
+                    { nome: "Harry Potter e a Câmara Secreta (2002)", imagem: "https://upload.wikimedia.org/wikipedia/pt/7/7e/Harry_Potter_2.jpg", pagina: "harry-potter-2.html" }
+                ]
+            }
+            // Adicione as outras sagas aqui
         ];
 
-        const form = document.getElementById('form-pesquisa');
-        const resultado = document.getElementById('resultado-filmes');
+        // Função para buscar as sagas
+        document.getElementById("form-pesquisa").addEventListener("submit", function(e) {
+            e.preventDefault(); // Previne o envio do formulário para evitar o reload da página
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const termo = document.getElementById('pesquisa').value.toLowerCase();
+            const pesquisa = document.getElementById("pesquisa").value.trim().toLowerCase();
+            const resultadoFilmes = document.getElementById("resultado-filmes");
+            resultadoFilmes.innerHTML = ""; // Limpa os resultados anteriores
 
-            const encontrados = filmes.filter(f => 
-                f.nome.toLowerCase().includes(termo) || 
-                f.genero.toLowerCase().includes(termo)
-            );
+            // Filtra as sagas que coincidem com a pesquisa
+            const sagaEncontrada = sagas.filter(saga => saga.nome.toLowerCase().includes(pesquisa));
 
-            resultado.innerHTML = '';
-
-            if(encontrados.length === 0){
-                resultado.innerHTML = '<p style="color:#e53935; text-align:center;">Nenhum filme encontrado.</p>';
-                return;
+            if (sagaEncontrada.length === 0) {
+                resultadoFilmes.innerHTML = "<p style='color:#e53935;'>Nenhuma saga encontrada com esse nome.</p>";
+            } else {
+                // Exibe os filmes da saga encontrada
+                sagaEncontrada.forEach(saga => {
+                    saga.filmes.forEach(filme => {
+                        const filmeCard = document.createElement("div");
+                        filmeCard.className = "filme-card";
+                        filmeCard.style.cssText = "background:#111; border:2px solid #e53935; border-radius:10px; overflow:hidden; text-align:center; width:200px; transition:transform 0.3s, box-shadow 0.3s;";
+                        filmeCard.innerHTML = `
+                            <a href="${filme.pagina}">
+                                <img src="${filme.imagem}" alt="${filme.nome}" style="width:100%; height:280px; object-fit:cover; border-radius:8px;">
+                                <p style="margin:10px 0 0; color:#e53935; font-weight:bold;">${filme.nome}</p>
+                            </a>
+                        `;
+                        resultadoFilmes.appendChild(filmeCard);
+                    });
+                });
             }
-
-            encontrados.forEach(f => {
-                const card = document.createElement('div');
-                card.className = 'filme-card';
-                card.style.cssText = "background:#111; border:2px solid #e53935; border-radius:10px; overflow:hidden; text-align:center; width:200px; transition:transform 0.3s, box-shadow 0.3s;";
-
-                card.innerHTML = `
-                    <a href="${f.pagina}">
-                        <img src="${f.imagem}" alt="${f.nome}" style="width:100%; height:280px; object-fit:cover; border-radius:8px;">
-                        <p style="margin:10px 0 0; color:#e53935; font-weight:bold;">${f.nome}</p>
-                    </a>
-                `;
-                resultado.appendChild(card);
-            });
         });
     </script>
 
