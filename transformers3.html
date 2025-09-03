@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Transformers (2007) — Filme e Trailer</title>
+  <title>Transformers 3 (2011) — Filme e Trailer</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     :root { --primary:#e53935; --bg:#000; --panel:#111; --text:#fff; --muted:#bbb; }
@@ -53,16 +53,13 @@
       position:relative; width:100%; border-radius:12px; overflow:hidden; background:#000;
       border:1px solid #333;
     }
-    /* 16:9 */
     .ratio-16x9 { aspect-ratio: 16 / 9; }
     iframe, video { width:100%; height:100%; display:block; }
 
-    /* aviso legal */
     .legal {
       color:#aaa; font-size:.9rem; margin-top:10px;
     }
 
-    /* responsivo */
     @media (max-width: 768px) {
       .hero { grid-template-columns: 1fr; }
       .poster img { height:300px; }
@@ -81,7 +78,7 @@
   <!-- HEADER -->
   <header>
     <h1>🎬 Universo de Sagas</h1>
-    <p>Transformers (2007)</p>
+    <p>Transformers 3 (2011)</p>
     <a class="back" href="index.html">⟵ Voltar à Página Principal</a>
   </header>
 
@@ -90,19 +87,19 @@
     <!-- HERO / DETALHES -->
     <section class="hero">
       <div class="poster">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/e/ee/Transformers-poster.jpg/250px-Transformers-poster.jpg" alt="Transformers (2007) poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/2/24/Transformers3poster.jpg" alt="Transformers 3 poster">
       </div>
 
       <div class="info">
-        <h2>Transformers (2007)</h2>
-        <div class="meta">Dir.: Michael Bay • Duração: 144 min • Ação, Ficção Científica</div>
+        <h2>Transformers 3: O Lado Oculto da Lua</h2>
+        <div class="meta">Dir.: Michael Bay • Duração: 154 min • Ação, Ficção Científica</div>
         <p class="sinopse">
-          Sam Witwicky descobre que está no centro de uma guerra milenar entre Autobots e Decepticons — raças de robôs alienígenas capazes de se transformar — enquanto a Terra se torna o palco da batalha pelo poderoso AllSpark.
+          Sam Witwicky retorna, desta vez descobrindo segredos do passado dos Autobots enquanto uma nova ameaça dos Decepticons surge, envolvendo tecnologia alienígena e conspirações na Lua.
         </p>
 
         <div class="badges">
           <span class="badge">Shia LaBeouf</span>
-          <span class="badge">Megan Fox</span>
+          <span class="badge">Rosie Huntington-Whiteley</span>
           <span class="badge">Optimus Prime</span>
           <span class="badge">Bumblebee</span>
         </div>
@@ -111,38 +108,26 @@
           <a class="btn btn-primary" href="#trailer">▶ Assistir Trailer</a>
           <a class="btn btn-secondary" href="#filme">🎞️ Ver Filme Completo</a>
           <a class="btn btn-secondary" target="_blank"
-             href="https://www.justwatch.com/br/busca?q=Transformers%202007">🔗 Onde assistir legalmente</a>
+             href="https://www.justwatch.com/br/busca?q=Transformers%203">🔗 Onde assistir legalmente</a>
         </div>
       </div>
     </section>
 
     <!-- TRAILER -->
-<section id="trailer" class="section">
-  <h3>Trailer Oficial</h3>
-  <div class="video-wrap ratio-16x9">
-    <iframe
-      src="https://www.youtube.com/embed/_dJNCbMsaRg?si=Qm_x0vLZ_C0m_LzP"
-      title="Transformers (2007) Trailer"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen></iframe>
-  </div>
-</section>
-
+    <section id="trailer" class="section">
+      <h3>Trailer Oficial</h3>
+      <div class="video-wrap ratio-16x9">
+        <!-- LINK DO TRAILER VAI AQUI -->
+        <iframe src="" title="Trailer Transformers 3" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
 
     <!-- FILME COMPLETO -->
     <section id="filme" class="section">
       <h3>Filme Completo</h3>
-
       <div class="video-wrap ratio-16x9">
-        <!--
-          Coloque o seu arquivo licenciado do filme em:
-          /videos/transformers-2007.mp4
-          Se preferir usar um link de streaming (legal), troque o src abaixo pelo URL/playlist (HLS/MP4) da sua plataforma.
-        -->
-        <video id="player-filme" controls preload="metadata" poster="https://upload.wikimedia.org/wikipedia/pt/8/8e/Transformers_2007.jpg">
-          <source src="videos/transformers-2007.mp4" type="video/mp4" />
+        <video id="player-filme" controls preload="metadata" poster="https://upload.wikimedia.org/wikipedia/pt/2/24/Transformers3poster.jpg">
+          <source src="videos/transformers-3.mp4" type="video/mp4" />
           Seu navegador não suporta o vídeo HTML5.
         </video>
       </div>
@@ -151,7 +136,6 @@
         ⚠️ Use apenas arquivos/links que você tem direito de utilizar. Se não tiver o arquivo local, use o botão “Onde assistir legalmente”.
       </p>
 
-      <!-- Botões extras -->
       <div class="actions" style="margin-top:12px;">
         <button class="btn btn-primary" id="continuar-btn">▶ Retomar do último ponto</button>
         <button class="btn btn-secondary" id="limpar-progresso-btn">⟲ Limpar progresso</button>
@@ -165,37 +149,27 @@
   </footer>
 
   <script>
-    // Salvar / restaurar progresso do vídeo no localStorage
     (function(){
-      const KEY = 'progress_transformers_2007';
+      const KEY = 'progress_transformers_3';
       const video = document.getElementById('player-filme');
       const continuarBtn = document.getElementById('continuar-btn');
       const limparBtn = document.getElementById('limpar-progresso-btn');
 
-      // Carrega progresso salvo
       const salvo = localStorage.getItem(KEY);
       if (salvo) {
-        try {
-          const t = parseFloat(salvo);
-          if (!isNaN(t)) {
-            continuarBtn.style.display = 'inline-flex';
-            continuarBtn.onclick = () => {
-              video.currentTime = t;
-              video.play().catch(()=>{});
-            };
-          }
-        } catch(e){}
+        const t = parseFloat(salvo);
+        if (!isNaN(t)) {
+          continuarBtn.style.display = 'inline-flex';
+          continuarBtn.onclick = () => { video.currentTime = t; video.play().catch(()=>{}); };
+        }
       } else {
         continuarBtn.style.display = 'none';
       }
 
-      // Salva a cada 5s de reprodução
       let tick = null;
       video.addEventListener('play', () => {
         if (tick) return;
-        tick = setInterval(() => {
-          localStorage.setItem(KEY, String(video.currentTime || 0));
-        }, 5000);
+        tick = setInterval(() => { localStorage.setItem(KEY, String(video.currentTime || 0)); }, 5000);
       });
 
       video.addEventListener('pause', () => {
@@ -209,7 +183,6 @@
         continuarBtn.style.display = 'none';
       });
 
-      // Limpar progresso manualmente
       limparBtn.addEventListener('click', () => {
         localStorage.removeItem(KEY);
         continuarBtn.style.display = 'none';
