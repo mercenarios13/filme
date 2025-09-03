@@ -7,12 +7,30 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
-  <header style="text-align: center; padding: 30px;">
-    <h1 style="color: #e53935; font-size: 2.5rem; text-shadow: 0 0 10px #e53935;">🎬 Universo de Sagas</h1>
-    <p style="color: #bbb; font-size: 1.2rem;">Escolha uma saga e mergulhe nos filmes</p>
+
+  <!-- HEADER COM MENU -->
+  <header style="display:flex; justify-content:space-between; align-items:center; padding:20px 30px; background:#111; color:#e53935; position:sticky; top:0; z-index:1000;">
+    <div class="logo" style="font-size:1.8rem; font-weight:bold; text-shadow:0 0 5px #e53935;">🎬 Universo de Sagas</div>
+
+    <nav>
+      <div class="hamburger" id="hamburger" style="display:none; flex-direction:column; gap:5px; cursor:pointer;">
+        <span style="display:block; width:25px; height:3px; background:#e53935; border-radius:2px;"></span>
+        <span style="display:block; width:25px; height:3px; background:#e53935; border-radius:2px;"></span>
+        <span style="display:block; width:25px; height:3px; background:#e53935; border-radius:2px;"></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links" style="display:flex; list-style:none; gap:20px;">
+        <li><a href="sobre.html" style="color:#e53935; text-decoration:none; font-weight:bold;">Sobre</a></li>
+        <li><a href="pesquisa.html" style="color:#e53935; text-decoration:none; font-weight:bold;">Pesquisar</a></li>
+        <li><a href="contato.html" style="color:#e53935; text-decoration:none; font-weight:bold;">Contato</a></li>
+        <li><a href="login.html" style="color:#e53935; text-decoration:none; font-weight:bold;">Login</a></li>
+        <li><a href="cadastro.html" style="color:#e53935; text-decoration:none; font-weight:bold;">Cadastro</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main style="display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; padding: 40px;">
+  <!-- MAIN COM CARDS -->
+  <main style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px;">
 
     <a href="transformers.html" class="saga-card">
       <img src="https://upload.wikimedia.org/wikipedia/pt/8/8e/Transformers_2007.jpg" alt="Transformers">
@@ -51,50 +69,79 @@
 
   </main>
 
-  <footer style="text-align: center; color: #e53935; padding: 20px; font-size: 0.9rem;">
+  <!-- FOOTER -->
+  <footer style="text-align: center; color: #e53935; padding: 20px;">
     <p>&copy; 2025 Universo de Sagas - Todos os direitos reservados</p>
   </footer>
 
+  <!-- ESTILO DOS CARDS -->
   <style>
     .saga-card {
-      background: linear-gradient(145deg, #111, #1c1c1c);
+      background-color: #111;
       border: 2px solid #e53935;
-      border-radius: 15px;
+      border-radius: 10px;
       text-align: center;
-      width: 200px;
-      padding: 15px;
+      width: 180px;
+      padding: 10px;
       text-decoration: none;
       color: #fff;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      transition: transform 0.2s, border-color 0.2s;
     }
 
     .saga-card:hover {
-      transform: translateY(-10px) scale(1.07);
+      transform: scale(1.05);
       border-color: #fff;
-      box-shadow: 0 8px 20px rgba(229, 57, 53, 0.7);
     }
 
     .saga-card img {
       width: 100%;
-      height: 260px;
-      border-radius: 10px;
-      margin-bottom: 12px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .saga-card:hover img {
-      transform: scale(1.05);
+      border-radius: 8px;
+      margin-bottom: 10px;
     }
 
     .saga-card span {
       display: block;
       font-weight: bold;
       color: #e53935;
-      font-size: 1.1rem;
-      text-shadow: 0 0 5px rgba(229, 57, 53, 0.6);
+    }
+
+    /* HAMBURGER RESPONSIVO */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex !important;
+      }
+
+      nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 200px;
+        flex-direction: column;
+        background-color: #111;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+      }
+
+      nav ul.active {
+        right: 0;
+      }
     }
   </style>
+
+  <!-- SCRIPT DO HAMBURGER -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('toggle');
+    });
+  </script>
+
 </body>
 </html>
+

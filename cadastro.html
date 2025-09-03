@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Universo de Sagas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
+
+  <!-- HEADER COM MENU -->
+  <header style="text-align: center; padding: 30px;">
+    <h1 style="color: #e53935; font-size: 2.5rem; text-shadow: 0 0 10px #e53935;">🎬 Universo de Sagas</h1>
+    <p style="color: #bbb; font-size: 1.2rem;">Crie sua conta e explore os filmes</p>
+  </header>
+
+  <!-- MAIN COM FORMULÁRIO -->
+  <main style="display:flex; justify-content:center; align-items:center; padding:50px 20px;">
+    <form id="cadastro-form" style="background-color:#111; padding:30px; border-radius:12px; width:100%; max-width:400px; box-shadow:0 4px 15px rgba(0,0,0,0.7);">
+      <h2 style="color:#e53935; text-align:center; margin-bottom:20px;">Cadastro</h2>
+      
+      <input type="text" id="nome" placeholder="Nome" required style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #e53935; background:#222; color:#fff;">
+      
+      <input type="email" id="email" placeholder="E-mail" required style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #e53935; background:#222; color:#fff;">
+      
+      <input type="password" id="senha" placeholder="Senha" required style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #e53935; background:#222; color:#fff;">
+      
+      <button type="submit" style="width:100%; padding:12px; background:#e53935; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:bold;">Cadastrar</button>
+      
+      <p style="color:#bbb; margin-top:15px; text-align:center;">Já tem conta? <a href="login.html" style="color:#ffcc00; text-decoration:none;">Entrar</a></p>
+    </form>
+  </main>
+
+  <!-- SCRIPT DE CADASTRO DIRETO -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('cadastro-form');
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const senha = document.getElementById('senha').value;
+
+        if (!nome || !email || !senha) {
+          alert('Preencha todos os campos!');
+          return;
+        }
+
+        // Pega os usuários salvos
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+        // Verifica se o e-mail já existe
+        if (usuarios.find(u => u.email === email)) {
+          alert('E-mail já cadastrado!');
+          return;
+        }
+
+        // Salva o usuário
+        usuarios.push({ nome, email, senha });
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        alert('Cadastro realizado com sucesso!');
+        window.location.href = 'login.html';
+      });
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer style="text-align:center; color:#e53935; padding:20px; font-size:0.9rem;">
+    <p>&copy; 2025 Universo de Sagas - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Universo de Sagas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
+
+  <!-- HEADER -->
+  <header style="text-align: center; padding: 30px;">
+    <h1 style="color: #e53935; font-size: 2.5rem; text-shadow: 0 0 10px #e53935;">🎬 Universo de Sagas</h1>
+    <p style="color: #bbb; font-size: 1.2rem;">Faça login para acessar os filmes</p>
+  </header>
+
+  <!-- MAIN COM FORMULÁRIO -->
+  <main style="display:flex; justify-content:center; align-items:center; padding:50px 20px;">
+    <form id="login-form" style="background-color:#111; padding:30px; border-radius:12px; width:100%; max-width:400px; box-shadow:0 4px 15px rgba(0,0,0,0.7);">
+      <h2 style="color:#e53935; text-align:center; margin-bottom:20px;">Login</h2>
+      
+      <input type="email" id="email-login" placeholder="E-mail" required
+             style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #e53935; background:#222; color:#fff;">
+      
+      <input type="password" id="senha-login" placeholder="Senha" required
+             style="width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #e53935; background:#222; color:#fff;">
+      
+      <button type="submit" style="width:100%; padding:12px; background:#e53935; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:bold;">Entrar</button>
+      
+      <p style="color:#bbb; margin-top:15px; text-align:center;">Não tem conta? <a href="cadastro.html" style="color:#ffcc00; text-decoration:none;">Cadastre-se</a></p>
+    </form>
+  </main>
+
+  <!-- SCRIPT LOGIN DIRETO -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('login-form');
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const email = document.getElementById('email-login').value.trim();
+        const senha = document.getElementById('senha-login').value;
+
+        if (!email || !senha) {
+          alert('Preencha todos os campos!');
+          return;
+        }
+
+        const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        const usuario = usuarios.find(u => u.email === email && u.senha === senha);
+
+        if (usuario) {
+          alert(`Bem-vindo, ${usuario.nome}!`);
+          window.location.href = 'index.html'; // Redireciona para a página principal
+        } else {
+          alert('E-mail ou senha incorretos!');
+        }
+      });
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer style="text-align:center; color:#e53935; padding:20px; font-size:0.9rem;">
+    <p>&copy; 2025 Universo de Sagas - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
