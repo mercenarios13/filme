@@ -20,11 +20,12 @@
     <section>
       <h2>Filmes</h2>
       <div class="filmes" style="display: flex; flex-wrap: wrap; gap: 20px;">
+        
         <!-- Filme 1 -->
         <div class="filme-card" 
              data-titulo="Transformers (2007)"
              data-trailer="https://www.youtube.com/watch?v=v8ItGrI-Ou0"
-             data-filme="https://www.exemplo.com/transformers-2007">
+             data-filme="transformers1.html">
           <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/e/ee/Transformers-poster.jpg/250px-Transformers-poster.jpg" 
                alt="Transformers 2007" style="width: 180px; border-radius: 8px;">
           <p>Transformers (2007)</p>
@@ -32,9 +33,9 @@
 
         <!-- Filme 2 -->
         <div class="filme-card" 
-             data-titulo="Transformers: A Vingança dos Derrotados"
+             data-titulo="Transformers: A Vingança dos Derrotados (2009)"
              data-trailer="https://www.youtube.com/watch?v=yCOvcyfR_0I"
-             data-filme="https://www.exemplo.com/transformers-2">
+             data-filme="transformers2.html">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiM5nHY9P0jd68KWfSmafcFQCQ7ExuskWiSQ&s" 
                alt="Transformers 2" style="width: 180px; border-radius: 8px;">
           <p>Transformers: A Vingança dos Derrotados</p>
@@ -42,9 +43,9 @@
 
         <!-- Filme 3 -->
         <div class="filme-card" 
-             data-titulo="Transformers: O Lado Oculto da Lua"
+             data-titulo="Transformers: O Lado Oculto da Lua (2011)"
              data-trailer="https://www.youtube.com/watch?v=Eun1I5g4k9s"
-             data-filme="https://www.exemplo.com/transformers-3">
+             data-filme="transformers3.html">
           <img src="https://upload.wikimedia.org/wikipedia/pt/b/bf/Transformers_dark_of_the_moon_ver5.jpg" 
                alt="Transformers 3" style="width: 180px; border-radius: 8px;">
           <p>Transformers: O Lado Oculto da Lua</p>
@@ -52,9 +53,9 @@
 
         <!-- Filme 4 -->
         <div class="filme-card" 
-             data-titulo="Transformers: A Era da Extinção"
+             data-titulo="Transformers: A Era da Extinção (2014)"
              data-trailer="https://www.youtube.com/watch?v=dYDGqmxMZFI"
-             data-filme="https://www.exemplo.com/transformers-4">
+             data-filme="transformers4.html">
           <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Transformers_Age_of_Extinction_poster.jpg/250px-Transformers_Age_of_Extinction_poster.jpg" 
                alt="Transformers 4" style="width: 180px; border-radius: 8px;">
           <p>Transformers: A Era da Extinção</p>
@@ -62,9 +63,9 @@
 
         <!-- Filme 5 -->
         <div class="filme-card" 
-             data-titulo="Transformers: O Último Cavaleiro"
+             data-titulo="Transformers: O Último Cavaleiro (2017)"
              data-trailer="https://www.youtube.com/watch?v=AntcyqJ6brc"
-             data-filme="https://www.exemplo.com/transformers-5">
+             data-filme="transformers5.html">
           <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/2/28/Transformers_The_Last_Knight.jpg/250px-Transformers_The_Last_Knight.jpg" 
                alt="Transformers 5" style="width: 180px; border-radius: 8px;">
           <p>Transformers: O Último Cavaleiro</p>
@@ -98,7 +99,7 @@
       function abrirModal(titulo, trailer, filme) {
         modalTitle.textContent = titulo;
         btnTrailer.onclick = () => window.open(trailer, '_blank');
-        btnFilme.onclick = () => window.open(filme, '_blank');
+        btnFilme.onclick = () => window.location.href = filme;
         modal.style.display = 'block';
       }
 

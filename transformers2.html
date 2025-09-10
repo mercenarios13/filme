@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Transformers: A Vingança dos Derrotados (2009) — Filme e Trailer</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     :root { --primary:#e53935; --bg:#000; --panel:#111; --text:#fff; --muted:#bbb; }
-    body { background:#000; color:#fff; font-family: Arial, sans-serif; margin:0; }
-    header { text-align:center; padding:30px; background:#111; border-bottom:1px solid #333; }
+    body { background:#000; color:#fff; font-family: Arial, sans-serif; }
+    header {
+      text-align:center; padding:30px; background:#111; border-bottom:1px solid #333;
+    }
     header h1 { color: var(--primary); font-size:2.2rem; text-shadow:0 0 10px var(--primary); margin:0; }
     header p { color:#bbb; margin-top:6px; }
     header .back { display:inline-block; margin-top:12px; color:var(--primary); text-decoration:none; font-weight:bold; }
@@ -50,10 +53,13 @@
       position:relative; width:100%; border-radius:12px; overflow:hidden; background:#000;
       border:1px solid #333;
     }
+    /* 16:9 */
     .ratio-16x9 { aspect-ratio: 16 / 9; }
     iframe, video { width:100%; height:100%; display:block; }
 
-    .legal { color:#aaa; font-size:.9rem; margin-top:10px; }
+    .legal {
+      color:#aaa; font-size:.9rem; margin-top:10px;
+    }
 
     @media (max-width: 768px) {
       .hero { grid-template-columns: 1fr; }
@@ -70,6 +76,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <h1>🎬 Universo de Sagas</h1>
     <p>Transformers: A Vingança dos Derrotados (2009)</p>
@@ -77,23 +84,27 @@
   </header>
 
   <main class="container">
+
+    <!-- HERO / DETALHES -->
     <section class="hero">
       <div class="poster">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/f/f7/Transformers_Revenge_of_the_Fallen.jpg" alt="Transformers 2 Poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/d/d7/Transformers Revenge of the Fallen poster.jpg/250px-Transformers Revenge of the Fallen poster.jpg" alt="Transformers 2009 poster">
       </div>
+
       <div class="info">
         <h2>Transformers: A Vingança dos Derrotados</h2>
-        <div class="meta">Dir.: Michael Bay • Duração: 150 min • Ação, Ficção Científica</div>
+        <div class="meta">Dir.: Michael Bay • Duração: 149 min • Ação, Ficção Científica</div>
         <p class="sinopse">
-          Sam e Mikaela se veem novamente envolvidos no conflito entre Autobots e Decepticons,
-          agora com a ameaça de um inimigo ancestral que pode destruir a Terra.
+          Sam Witwicky descobre pistas sobre as origens dos Transformers enquanto a batalha entre Autobots e Decepticons se intensifica, ameaçando a própria Terra.
         </p>
+
         <div class="badges">
           <span class="badge">Shia LaBeouf</span>
           <span class="badge">Megan Fox</span>
           <span class="badge">Optimus Prime</span>
           <span class="badge">Bumblebee</span>
         </div>
+
         <div class="actions">
           <a class="btn btn-primary" href="#trailer">▶ Assistir Trailer</a>
           <a class="btn btn-secondary" href="#filme">🎞️ Ver Filme Completo</a>
@@ -103,28 +114,40 @@
       </div>
     </section>
 
+    <!-- TRAILER -->
     <section id="trailer" class="section">
       <h3>Trailer Oficial</h3>
       <div class="video-wrap ratio-16x9">
-        <!-- depois você coloca o link do trailer do YouTube -->
-        <iframe src="" title="Trailer Transformers 2" frameborder="0" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/yCOvcyfR_0I"
+          title="Transformers: A Vingança dos Derrotados Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
       </div>
     </section>
 
+    <!-- FILME COMPLETO -->
     <section id="filme" class="section">
       <h3>Filme Completo</h3>
       <div class="video-wrap ratio-16x9">
-        <video id="player-filme" controls preload="metadata" poster="https://upload.wikimedia.org/wikipedia/pt/f/f7/Transformers_Revenge_of_the_Fallen.jpg">
+        <video id="player-filme" controls preload="metadata" poster="https://upload.wikimedia.org/wikipedia/pt/d/d7/Transformers_Revenge_of_the_Fallen_poster.jpg">
           <source src="videos/transformers-2009.mp4" type="video/mp4" />
           Seu navegador não suporta o vídeo HTML5.
         </video>
       </div>
-      <p class="legal">⚠️ Use apenas arquivos/links que você tem direito de utilizar.</p>
+
+      <p class="legal">
+        ⚠️ Use apenas arquivos/links que você tem direito de utilizar. Se não tiver o arquivo local, use o botão “Onde assistir legalmente”.
+      </p>
+
       <div class="actions" style="margin-top:12px;">
         <button class="btn btn-primary" id="continuar-btn">▶ Retomar do último ponto</button>
         <button class="btn btn-secondary" id="limpar-progresso-btn">⟲ Limpar progresso</button>
       </div>
     </section>
+
   </main>
 
   <footer style="text-align:center; color:#e53935; padding:20px; border-top:1px solid #333;">

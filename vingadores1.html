@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Transformers: O Último Cavaleiro (2017) — Filme e Trailer</title>
+  <title>Vingadores (2012) — Filme e Trailer</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     :root { --primary:#e53935; --bg:#000; --panel:#111; --text:#fff; --muted:#bbb; }
@@ -11,7 +11,7 @@
     header {
       text-align:center; padding:30px; background:#111; border-bottom:1px solid #333;
     }
-    header h1 { color: var(--primary); font-size:2.2rem; text-shadow:0 0 10px var(--primary); margin:0; }
+    header h1 { color: var(--primary); font-size:2.2rem; margin:0; text-shadow:0 0 10px var(--primary); }
     header p { color:#bbb; margin-top:6px; }
     header .back { display:inline-block; margin-top:12px; color:var(--primary); text-decoration:none; font-weight:bold; }
     header .back:hover { color:#ffcc00; }
@@ -48,7 +48,7 @@
     .section {
       margin-top:32px; background:#0f0f0f; border:1px solid #222; border-radius:12px; padding:18px;
     }
-    .section h3 { margin:0 0 14px; color:var(--primary); font-size:1.4rem; text-shadow:0 0 6px rgba(229,57,53,.5); }
+    .section h3 { margin:0 0 14px; color:var(--primary); font-size:1.4rem; }
     .video-wrap {
       position:relative; width:100%; border-radius:12px; overflow:hidden; background:#000;
       border:1px solid #333;
@@ -61,7 +61,6 @@
     @media (max-width: 768px) {
       .hero { grid-template-columns: 1fr; }
       .poster img { height:300px; }
-      header h1 { font-size:1.9rem; }
     }
     @media (max-width: 430px) {
       .container { padding:0 14px; }
@@ -75,37 +74,38 @@
 
   <!-- HEADER -->
   <header>
-    <h1>🎬 Universo de Sagas</h1>
-    <p>Transformers: O Último Cavaleiro (2017)</p>
-    <a class="back" href="index.html">⟵ Voltar à Página Principal</a>
+    <h1>🎬 Universo Marvel</h1>
+    <p>Vingadores (2012)</p>
+    <a class="back" href="saga-vingadores.html">⟵ Voltar à Saga Vingadores</a>
   </header>
 
   <main class="container">
 
-    <!-- HERO / DETALHES -->
+    <!-- HERO -->
     <section class="hero">
       <div class="poster">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/2/28/Transformers_The_Last_Knight.jpg" alt="Transformers 2017 poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/6/69/The_Avengers_Cartaz.jpg/250px-The_Avengers_Cartaz.jpg" alt="Poster Vingadores (2012)">
       </div>
 
       <div class="info">
-        <h2>Transformers: O Último Cavaleiro</h2>
-        <div class="meta">Dir.: Michael Bay • Duração: 154 min • Ação, Ficção Científica</div>
+        <h2>Vingadores (2012)</h2>
+        <div class="meta">Dir.: Joss Whedon • Duração: 143 min • Ação, Aventura, Ficção Científica</div>
         <p class="sinopse">
-          A guerra entre Autobots e Decepticons ameaça a Terra mais uma vez. Optimus Prime desapareceu, e Cade Yeager se une a uma aliança improvável para desvendar os segredos ocultos dos Transformers na história da humanidade.
+          Quando um inimigo inesperado ameaça a segurança mundial, Nick Fury reúne uma equipe de super-heróis — Homem de Ferro, Capitão América, Thor, Hulk, Viúva Negra e Gavião Arqueiro — para formar os Vingadores e salvar a humanidade.
         </p>
 
         <div class="badges">
-          <span class="badge">Mark Wahlberg</span>
-          <span class="badge">Anthony Hopkins</span>
-          <span class="badge">Optimus Prime</span>
-          <span class="badge">Bumblebee</span>
+          <span class="badge">Robert Downey Jr.</span>
+          <span class="badge">Chris Evans</span>
+          <span class="badge">Scarlett Johansson</span>
+          <span class="badge">Mark Ruffalo</span>
         </div>
 
         <div class="actions">
           <a class="btn btn-primary" href="#trailer">▶ Assistir Trailer</a>
           <a class="btn btn-secondary" href="#filme">🎞️ Ver Filme Completo</a>
-          <a class="btn btn-secondary" target="_blank" href="https://www.justwatch.com/br/busca?q=Transformers%202017">🔗 Onde assistir legalmente</a>
+          <a class="btn btn-secondary" target="_blank"
+             href="https://www.justwatch.com/br/busca?q=Vingadores%202012">🔗 Onde assistir legalmente</a>
         </div>
       </div>
     </section>
@@ -114,7 +114,11 @@
     <section id="trailer" class="section">
       <h3>Trailer Oficial</h3>
       <div class="video-wrap ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/AntcyqJ6brc" title="Transformers: O Último Cavaleiro Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/KeNEGtsCWEk"
+                title="Vingadores (2012) Trailer"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
       </div>
     </section>
 
@@ -122,14 +126,14 @@
     <section id="filme" class="section">
       <h3>Filme Completo</h3>
       <div class="video-wrap ratio-16x9">
-        <video id="player-filme" controls preload="metadata" poster="https://upload.wikimedia.org/wikipedia/pt/2/28/Transformers_The_Last_Knight.jpg">
-          <source src="videos/transformers-2017.mp4" type="video/mp4" />
-          Seu navegador não suporta o vídeo HTML5.
+        <video id="player-filme" controls preload="metadata" poster="https://upload.wikimedia.org/wikipedia/pt/6/69/The_Avengers_Cartaz.jpg">
+          <source src="videos/vingadores-2012.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeo HTML5.
         </video>
       </div>
-
-      <p class="legal">⚠️ Use apenas arquivos/links que você tem direito de utilizar. Se não tiver o arquivo local, use o botão “Onde assistir legalmente”.</p>
-
+      <p class="legal">
+        ⚠️ Use apenas arquivos ou links que você tem direito de utilizar.
+      </p>
       <div class="actions" style="margin-top:12px;">
         <button class="btn btn-primary" id="continuar-btn">▶ Retomar do último ponto</button>
         <button class="btn btn-secondary" id="limpar-progresso-btn">⟲ Limpar progresso</button>
@@ -139,12 +143,12 @@
   </main>
 
   <footer style="text-align:center; color:#e53935; padding:20px; border-top:1px solid #333;">
-    <p>&copy; 2025 Universo de Sagas - Todos os direitos reservados</p>
+    <p>&copy; 2025 Universo Marvel - Todos os direitos reservados</p>
   </footer>
 
   <script>
     (function(){
-      const KEY = 'progress_transformers_2017';
+      const KEY = 'progress_vingadores_2012';
       const video = document.getElementById('player-filme');
       const continuarBtn = document.getElementById('continuar-btn');
       const limparBtn = document.getElementById('limpar-progresso-btn');
