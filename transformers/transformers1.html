@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transformers (2007) — Filme e Trailer</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root { --primary:#e53935; --bg:#000; --panel:#111; --text:#fff; --muted:#bbb; }
+    body { background:#000; color:#fff; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      color: var(--primary);
+      font-size: 2.2rem;
+      text-shadow: 0 0 10px var(--primary);
+      margin: 0;
+    }
+    header p {
+      color: #bbb;
+      margin-top: 6px;
+    }
+    header .back {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header .back:hover {
+      color: #ffcc00;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 24px;
+      background: linear-gradient(145deg, #0d0d0d, #121212);
+      border: 2px solid var(--primary);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(229, 57, 53, 0.15);
+    }
+    .poster img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    }
+    .info h2 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+    .meta {
+      color: #ddd;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    .sinopse {
+      color: #eee;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .badge {
+      border: 1px solid var(--primary);
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #ffb0ac;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(229, 57, 53, 0.25);
+    }
+    .btn:active {
+      transform: translateY(0);
+      opacity: .9;
+    }
+
+    .section {
+      margin-top: 32px;
+      background: #0f0f0f;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .section h3 {
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 1.4rem;
+      text-shadow: 0 0 6px rgba(229, 57, 53, .5);
+    }
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid #333;
+    }
+    /* 16:9 */
+    .ratio-16x9 {
+      aspect-ratio: 16 / 9;
+    }
+    iframe,
+    video {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* aviso legal */
+    .legal {
+      color: #aaa;
+      font-size: .9rem;
+      margin-top: 10px;
+    }
+
+    /* responsivo */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .poster img {
+        height: 300px;
+      }
+      header h1 {
+        font-size: 1.9rem;
+      }
+    }
+    @media (max-width: 430px) {
+      .container {
+        padding: 0 14px;
+      }
+      .poster img {
+        height: 260px;
+      }
+      .info h2 {
+        font-size: 1.5rem;
+      }
+      .actions .btn {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🎬 Universo de Sagas</h1>
+    <p>Transformers (2007)</p>
+    <a class="back" href="transformers.html">⟵ Voltar à Página Principal</a>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO / DETALHES -->
+    <section class="hero">
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/e/ee/Transformers-poster.jpg/250px-Transformers-poster.jpg" alt="Transformers (2007) poster">
+      </div>
+
+      <div class="info">
+        <h2>Transformers (2007)</h2>
+        <div class="meta">Dir.: Michael Bay • Duração: 144 min • Ação, Ficção Científica</div>
+        <p class="sinopse">
+          Sam Witwicky descobre que está no centro de uma guerra milenar entre Autobots e Decepticons — raças de robôs alienígenas capazes de se transformar — enquanto a Terra se torna o palco da batalha pelo poderoso AllSpark.
+        </p>
+
+        <div class="badges">
+          <span class="badge">Shia LaBeouf</span>
+          <span class="badge">Megan Fox</span>
+          <span class="badge">Optimus Prime</span>
+          <span class="badge">Bumblebee</span>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="">▶ Assistir Trailer</a>
+          <a class="btn btn-secondary" href="#filme">🎞️ Ver Filme Completo</a>
+          <a class="btn btn-secondary" target="_blank" href="https://www.justwatch.com/br/busca?q=Transformers%202007">🔗 Onde assistir legalmente</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section class="section">
+      <h3>História</h3>
+      <p class="sinopse">
+        Em Transformers, o jovem Sam Witwicky se vê no meio de uma guerra entre duas facções de robôs alienígenas que se disfarçam como veículos. Os Autobots, liderados por Optimus Prime, buscam proteger a Terra e o poderoso AllSpark, um artefato capaz de dar vida a qualquer máquina. Já os Decepticons, liderados por Megatron, querem conquistar o universo usando o AllSpark.
+        A batalha se intensifica quando Sam descobre que seu ancestral ajudou a mapear o local do AllSpark, tornando-o o alvo de ambas as facções. Sam, com a ajuda de seu novo amigo Bumblebee e os Autobots, se vê envolvido em uma luta para salvar a Terra de uma invasão devastadora.
+      </p>
+    </section>
+
+  <footer style="text-align:center; color:#e53935; padding:20px; border-top:1px solid #333;">
+    <p>&copy; 2025 Universo de Sagas - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
