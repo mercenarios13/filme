@@ -104,13 +104,10 @@
 
         <div class="actions">
           <a class="btn btn-primary" href="trailer5.html">▶ Assistir Trailer</a>
-          <a class="btn btn-secondary" href="#filme">🎞️ Ver Filme Completo</a>
           <a class="btn btn-secondary" target="_blank" href="https://www.justwatch.com/br/busca?q=Transformers%202017">🔗 Onde assistir legalmente</a>
         </div>
       </div>
     </section>
-
-    
 
   </main>
 
@@ -133,10 +130,10 @@
             continuarBtn.style.display = 'inline-flex';
             continuarBtn.onclick = () => {
               video.currentTime = t;
-              video.play().catch(()=>{});
+              video.play().catch(()=>{}); 
             };
           }
-        } catch(e){}
+        } catch(e){ }
       } else {
         continuarBtn.style.display = 'none';
       }

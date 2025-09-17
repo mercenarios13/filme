@@ -85,7 +85,7 @@
     <!-- HERO / DETALHES -->
     <section class="hero">
       <div class="poster">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/a/a9/Transformers_-_Dark_of_the_Moon_poster.jpg/250px-Transformers_-_Dark_of_the_Moon_poster.jpg" alt="Transformers 2011 poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/b/bf/Transformers_dark_of_the_moon_ver5.jpg" alt="Transformers 2011 poster">
       </div>
 
       <div class="info">
@@ -103,14 +103,11 @@
         </div>
 
         <div class="actions">
-          <a class="btn btn-primary" href="trailer/trailer3.html">▶ Assistir Trailer</a>
-          <a class="btn btn-secondary" href="#filme">🎞️ Ver Filme Completo</a>
+          <a class="btn btn-primary" href="trailer3.html">▶ Assistir Trailer</a>
           <a class="btn btn-secondary" target="_blank" href="https://www.justwatch.com/br/busca?q=Transformers%202011">🔗 Onde assistir legalmente</a>
         </div>
       </div>
     </section>
-
-    
 
   </main>
 
@@ -133,7 +130,7 @@
             continuarBtn.style.display = 'inline-flex';
             continuarBtn.onclick = () => {
               video.currentTime = t;
-              video.play().catch(()=>{});
+              video.play().catch(()=>{}); 
             };
           }
         } catch(e){}
