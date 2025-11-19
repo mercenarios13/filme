@@ -1,102 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saga Velozes e Furiosos</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background: rgba(20, 20, 20, 0.9);
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 2px solid #e53935;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #e53935;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      padding: 0;
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: #e53935;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Área dos filmes */
+    main {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e53935;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .filmes {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 25px;
+    }
+
+    .filme-card {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+      transform: scale(1);
+    }
+
+    .filme-card img {
+      width: 100%;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .filme-card:hover {
+      transform: scale(1.05);
+    }
+
+    .filme-card:hover img {
+      box-shadow: 0 0 15px #e53935;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      color: #e53935;
+      background: rgba(20, 20, 20, 0.9);
+      border-top: 2px solid #e53935;
+    }
+  </style>
+
 </head>
-<body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
+<body>
+
   <header>
-    <h1 style="color:#e53935;">Saga Velozes e Furiosos</h1>
+    <h1>Saga Velozes e Furiosos</h1>
     <nav>
       <ul>
-        <li><a href="index.html" style="color:#e53935;">Voltar à Página Principal</a></li>
+        <li><a href="index.html">Voltar à Página Principal</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Filmes</h2>
-      <div class="filmes" style="display:flex; flex-wrap:wrap; gap:20px;">
+    <h2>Filmes</h2>
 
-        <!-- Filme 1 -->
-        <a class="filme-card" href="velozes-e-furiosos1.html">
-          <img src="https://upload.wikimedia.org/wikipedia/pt/f/f9/TheFastandtheFurious.jpg" 
-               alt="Velozes e Furiosos 1" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos (2001)</p>
-        </a>
+    <div class="filmes">
 
-        <!-- Filme 2 -->
-        <a class="filme-card" href="velozes-e-furiosos2.html">
-          <img src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/90/03/20/20077808.jpg" 
-               alt="Velozes e Furiosos 2" style="width:180px; border-radius:8px;">
-          <p>+ Velozes e Furiosos (2003)</p>
-        </a>
+      <!-- Filme 1 -->
+      <a class="filme-card" href="velozes-e-furiosos1.html">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/f/f9/TheFastandtheFurious.jpg">
+        <p>Velozes e Furiosos (2001)</p>
+      </a>
 
-        <!-- Filme 3 -->
-        <a class="filme-card" href="velozes-e-furiosos3.html">
-          <img src="https://br.web.img2.acsta.net/pictures/210/383/21038387_20130909201408304.jpg" 
-               alt="Velozes e Furiosos 3" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos: Tokyo Drift (2006)</p>
-        </a>
+      <!-- Filme 2 -->
+      <a class="filme-card" href="velozes-e-furiosos2.html">
+        <img src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/90/03/20/20077808.jpg">
+        <p>+ Velozes e Furiosos (2003)</p>
+      </a>
 
-        <!-- Filme 4 -->
-        <a class="filme-card" href="vingadores4.html">
-          <img src="https://br.web.img3.acsta.net/pictures/210/445/21044501_2013092621313492.jpg" 
-               alt="Velozes e Furiosos 4" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos 4 (2009)</p>
-        </a>
+      <!-- Filme 3 -->
+      <a class="filme-card" href="velozes-e-furiosos3.html">
+        <img src="https://br.web.img2.acsta.net/pictures/210/383/21038387_20130909201408304.jpg">
+        <p>Tokyo Drift (2006)</p>
+      </a>
 
-        <!-- Filme 5 -->
-        <a class="filme-card" href="velozes-e-furiosos5.html">
-          <img src="https://br.web.img3.acsta.net/medias/nmedia/18/87/34/17/20028727.jpg" 
-               alt="Velozes e Furiosos 5" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos 5 (2011)</p>
-        </a>
+      <!-- Filme 4 -->
+      <a class="filme-card" href="vingadores4.html">
+        <img src="https://br.web.img3.acsta.net/pictures/210/445/21044501_2013092621313492.jpg">
+        <p>Velozes e Furiosos 4 (2009)</p>
+      </a>
 
-        <!-- Filme 6 -->
-        <a class="filme-card" href="velozes-e-furiosos6.html">
-          <img src="https://br.web.img3.acsta.net/medias/nmedia/18/92/81/46/20528636.jpg" 
-               alt="Velozes e Furiosos 6" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos 6 (2013)</p>
-        </a>
+      <!-- Filme 5 -->
+      <a class="filme-card" href="velozes-e-furiosos5.html">
+        <img src="https://br.web.img3.acsta.net/medias/nmedia/18/87/34/17/20028727.jpg">
+        <p>Velozes e Furiosos 5 (2011)</p>
+      </a>
 
-        <!-- Filme 7 -->
-        <a class="filme-card" href="vf7.html">
-          <img src="https://br.web.img3.acsta.net/pictures/15/03/30/21/19/054397.jpg" 
-               alt="Velozes e Furiosos 7" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos 7 (2015)</p>
-        </a>
+      <!-- Filme 6 -->
+      <a class="filme-card" href="velozes-e-furiosos6.html">
+        <img src="https://br.web.img3.acsta.net/medias/nmedia/18/92/81/46/20528636.jpg">
+        <p>Velozes e Furiosos 6 (2013)</p>
+      </a>
 
-        <!-- Filme 8 -->
-        <a class="filme-card" href="vf8.html">
-          <img src="https://br.web.img3.acsta.net/pictures/17/03/27/09/49/121118.jpg" 
-               alt="Velozes e Furiosos 8" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos 8 (2017)</p>
-        </a>
+      <!-- Filme 7 -->
+      <a class="filme-card" href="vf7.html">
+        <img src="https://br.web.img3.acsta.net/pictures/15/03/30/21/19/054397.jpg">
+        <p>Velozes e Furiosos 7 (2015)</p>
+      </a>
 
-        <!-- Filme 9 -->
-        <a class="filme-card" href="vf9.html">
-          <img src="https://br.web.img3.acsta.net/pictures/21/04/14/19/06/3385237.jpg" 
-               alt="Velozes e Furiosos 9" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos 9 (2021)</p>
-        </a>
+      <!-- Filme 8 -->
+      <a class="filme-card" href="vf8.html">
+        <img src="https://br.web.img3.acsta.net/pictures/17/03/27/09/49/121118.jpg">
+        <p>Velozes e Furiosos 8 (2017)</p>
+      </a>
 
-        <!-- Filme 10 parte 1-->
-        <a class="filme-card" href="vf9.html">
-          <img src="https://br.web.img2.acsta.net/pictures/23/05/16/22/53/0156803.jpg" 
-               alt="Velozes e Furiosos 10 parte 1" style="width:180px; border-radius:8px;">
-          <p>Velozes e Furiosos 10 (2023)</p>
-        </a>
+      <!-- Filme 9 -->
+      <a class="filme-card" href="vf9.html">
+        <img src="https://br.web.img3.acsta.net/pictures/21/04/14/19/06/3385237.jpg">
+        <p>Velozes e Furiosos 9 (2021)</p>
+      </a>
 
-      </div>
-    </section>
+      <!-- Filme 10 -->
+      <a class="filme-card" href="vf10.html">
+        <img src="https://br.web.img2.acsta.net/pictures/23/05/16/22/53/0156803.jpg">
+        <p>Velozes e Furiosos 10 (2023)</p>
+      </a>
+
+    </div>
   </main>
 
-  <footer style="margin-top:40px; text-align:center; color:#e53935;">
+  <footer>
     <p>&copy; 2025 Filmes - Todos os direitos reservados</p>
   </footer>
+
 </body>
 </html>

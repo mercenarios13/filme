@@ -4,14 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saga Vingadores</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Estilo interno para facilitar -->
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: #111;
+            border-bottom: 2px solid #e53935;
+        }
+
+        header h1 {
+            color: #e53935;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            color: #e53935;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #e53935;
+            margin-bottom: 20px;
+        }
+
+        .filmes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .filme-card {
+            background: #111;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 190px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .filme-card:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 15px #e53935;
+        }
+
+        .filme-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .filme-card p {
+            margin-top: 10px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 15px;
+            background: #111;
+            color: #e53935;
+            border-top: 2px solid #e53935;
+        }
+    </style>
 </head>
-<body style="background-color:#000; color:#fff; font-family:Arial, sans-serif;">
+
+<body>
+
     <header>
-        <h1 style="color:#e53935;">Saga Vingadores</h1>
+        <h1>Saga Vingadores</h1>
         <nav>
             <ul>
-                <li><a href="index.html" style="color:#e53935;">Voltar à Página Principal</a></li>
+                <li><a href="index.html">Voltar à Página Principal</a></li>
             </ul>
         </nav>
     </header>
@@ -19,33 +107,30 @@
     <main>
         <section>
             <h2>Filmes da Saga</h2>
-            <div class="filmes" style="display:flex; flex-wrap:wrap; gap:20px;">
+
+            <div class="filmes">
 
                 <!-- Filme 1 -->
                 <a class="filme-card" href="vingadores1.html">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/6/69/The_Avengers_Cartaz.jpg/250px-The_Avengers_Cartaz.jpg" 
-                         alt="Vingadores 2012" style="width:180px; border-radius:8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/6/69/The_Avengers_Cartaz.jpg/250px-The_Avengers_Cartaz.jpg">
                     <p>Vingadores (2012)</p>
                 </a>
 
                 <!-- Filme 2 -->
                 <a class="filme-card" href="vingadores2.html">
-                    <img src="https://br.web.img2.acsta.net/pictures/15/02/24/18/27/528824.jpg" 
-                         alt="Era de Ultron" style="width:180px; border-radius:8px;">
+                    <img src="https://br.web.img2.acsta.net/pictures/15/02/24/18/27/528824.jpg">
                     <p>Vingadores: Era de Ultron</p>
                 </a>
 
                 <!-- Filme 3 -->
                 <a class="filme-card" href="vingadores3.html">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/9/90/Avengers_Infinity_War.jpg" 
-                         alt="Guerra Infinita" style="width:180px; border-radius:8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/9/90/Avengers_Infinity_War.jpg">
                     <p>Vingadores: Guerra Infinita</p>
                 </a>
 
                 <!-- Filme 4 -->
                 <a class="filme-card" href="vingadores4.html">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/9b/Avengers_Endgame.jpg/250px-Avengers_Endgame.jpg" 
-                         alt="Ultimato" style="width:180px; border-radius:8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/9b/Avengers_Endgame.jpg/250px-Avengers_Endgame.jpg">
                     <p>Vingadores: Ultimato</p>
                 </a>
 
@@ -53,8 +138,9 @@
         </section>
     </main>
 
-    <footer style="margin-top:40px; text-align:center; color:#e53935;">
+    <footer>
         <p>&copy; 2025 Filmes - Todos os direitos reservados</p>
     </footer>
+
 </body>
 </html>
