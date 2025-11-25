@@ -4,14 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saga Transformers</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- ESTILIZAÇÃO DIRETO NO CÓDIGO -->
+  <style>
+    /* ======== ESTILO GERAL ======== */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    /* ======== HEADER ======== */
+    header {
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(to right, #7b0000, #e53935);
+      border-bottom: 3px solid #e53935;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 2.3em;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd4d4;
+      text-shadow: 0 0 10px #ff6b6b;
+    }
+
+    /* ======== CARDS DE FILMES ======== */
+    .filmes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .filme-card {
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      width: 200px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      padding-bottom: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #111;
+      border: 2px solid #e53935;
+      box-shadow: 0 0 10px #e53935;
+    }
+
+    .filme-card img {
+      width: 100%;
+      border-bottom: 2px solid #e53935;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .filme-card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px #ff4b4b;
+    }
+
+    .filme-card p {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background-color: #111;
+      color: #e53935;
+      text-align: center;
+      border-top: 2px solid #e53935;
+    }
+  </style>
 </head>
-<body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
+
+<body>
   <header>
-    <h1 style="color: #e53935;">Saga Transformers</h1>
+    <h1>Saga Transformers</h1>
     <nav>
       <ul>
-        <li><a href="index.html" style="color: #e53935;">Voltar à Página Principal</a></li>
+        <li><a href="index.html">Voltar à Página Principal</a></li>
       </ul>
     </nav>
   </header>
@@ -19,40 +116,40 @@
   <main>
     <section>
       <h2>Filmes</h2>
-      <div class="filmes" style="display: flex; flex-wrap: wrap; gap: 20px;">
-        
+      <div class="filmes">
+
         <!-- Filme 1 -->
         <a class="filme-card" href="transformers1.html">
           <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/e/ee/Transformers-poster.jpg/250px-Transformers-poster.jpg" 
-               alt="Transformers 2007" style="width: 180px; border-radius: 8px;">
+               alt="Transformers 2007">
           <p>Transformers (2007)</p>
         </a>
 
         <!-- Filme 2 -->
         <a class="filme-card" href="transformers2.html">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiM5nHY9P0jd68KWfSmafcFQCQ7ExuskWiSQ&s" 
-               alt="Transformers 2" style="width: 180px; border-radius: 8px;">
+               alt="Transformers 2">
           <p>Transformers: A Vingança dos Derrotados</p>
         </a>
 
         <!-- Filme 3 -->
         <a class="filme-card" href="transformers3.html">
           <img src="https://upload.wikimedia.org/wikipedia/pt/b/bf/Transformers_dark_of_the_moon_ver5.jpg" 
-               alt="Transformers 3" style="width: 180px; border-radius: 8px;">
+               alt="Transformers 3">
           <p>Transformers: O Lado Oculto da Lua</p>
         </a>
 
         <!-- Filme 4 -->
         <a class="filme-card" href="transformers4.html">
           <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Transformers_Age_of_Extinction_poster.jpg/250px-Transformers_Age_of_Extinction_poster.jpg" 
-               alt="Transformers 4" style="width: 180px; border-radius: 8px;">
+               alt="Transformers 4">
           <p>Transformers: A Era da Extinção</p>
         </a>
 
         <!-- Filme 5 -->
         <a class="filme-card" href="transformers5.html">
           <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/2/28/Transformers_The_Last_Knight.jpg/250px-Transformers_The_Last_Knight.jpg" 
-               alt="Transformers 5" style="width: 180px; border-radius: 8px;">
+               alt="Transformers 5">
           <p>Transformers: O Último Cavaleiro</p>
         </a>
 
@@ -60,7 +157,7 @@
     </section>
   </main>
 
-  <footer style="margin-top: 40px; text-align: center; color: #e53935;">
+  <footer>
     <p>&copy; 2025 Filmes - Todos os direitos reservados</p>
   </footer>
 </body>
